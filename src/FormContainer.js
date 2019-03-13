@@ -6,14 +6,19 @@ class FormContainer extends React.Component {
     super();
     this.state = {
       firstName: "",
-      lastName: ""
+      lastName: "",
+      gender: "",
+      destination: "",
+      isVegan: false,
+      isAnything: true,
+      isVegetarian: false
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
     const { name, value, type, checked } = e.target;
-    type === "checkBox"
+    type === "checkbox"
       ? this.setState({ [name]: checked })
       : this.setState({ [name]: value });
   }
